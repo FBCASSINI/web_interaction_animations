@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Sliding Panels Temmplate by Flavio Cassini WIA Presentation</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                	<img src="img/sliding-panels-template-featured.png">
+                	<h2>Sliding Panels Template</h2>
+                </section>
+				<section>
+                	<h2>Description</h2>
+                	<p><strong>Sliding Panaels plugin</strong> is a simple portfolio template, with project preview images that slide out to reveal the selected project.	</p>
+               	</section>
+                <section>
+                	<h2>Why i choose this plugin...</h2>
+               	 	<p>The reason I choose this plugin because I thought it was fascinating and unique. I have never seen anything like till now. It doesn’t have a specific functional reason but more of a unique style to present a portfolio site to your visitors. </p>
+                </section>
+                <section>
+                	<h3>Here is the plugin in action. <strong class="fragment highlight-red">Please click on link.</strong></h3>
+                </section>
+                <section>
+                	<p>When coding this plugin I first looked at the JavaScript code in what I need to change to add more panels or take out a panel from the pre-configured 4 panels with in the code. After looking at the JavaScript I pursued to looking the HTML and CSS and found a better way to add more panels. <strong class="fragment highlight-red">Please check the next slide for the code.</strong></p>
+                </section>
+                <section>
+                	<p>To add another panel we have to first code the HTML. Go inside the index.html and on line 55 and add this code shown below. What your doing is adding the label for the for the panels labled project. </p>
+                	<h5>Code View</h5>
+                	<pre><code>
+&lt;li&gt;
+&lt;a&nbsp;href=&quot;#0&quot;&gt;
+&lt;div&nbsp;class=&quot;cd-project-title&quot;&gt;
+&lt;h2&gt;Project&nbsp;5&lt;/h2&gt;
+&lt;p&gt;Brief&nbsp;description&nbsp;of&nbsp;the&nbsp;project&nbsp;here&lt;/p&gt;
+&lt;/div&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+                </code></pre>
+                </section>
+                <section>
+                	<p>Now Still in the Index.html. Go to line 138 and add the code below. This will add the parapgraphs section when panel is clicked.</p>
+                	<h5>Code View</h5>
+                	<pre><code>
+&lt;li&gt;
+&lt;div&nbsp;class=&quot;preview-image&quot;&gt;
+&lt;div&nbsp;class=&quot;cd-project-title&quot;&gt;
+&lt;h2&gt;Project&nbsp;5&lt;/h2&gt;
+&lt;p&gt;Brief&nbsp;description&nbsp;of&nbsp;the&nbsp;project&nbsp;here&lt;/p&gt;
+&lt;/div&gt;&nbsp;
+&lt;/div&gt;
+
+&lt;div&nbsp;class=&quot;cd-project-info&quot;&gt;
+&lt;p&gt;Text&nbsp;Goes&nbsp;Here....&lt;/p&gt;
+&lt;/div&gt;&nbsp;&lt;!--&nbsp;.cd-project-info&nbsp;--&gt;
+&lt;/li&gt;
+                
+                	</code></pre>
+                </section>
+                <section>
+                	<p>Now go into the CSS folder and open style.css. In style.css you go to line 293 and change the width from 25% to 20%. This will make the panels shrink the width by 5% so you can add another panel. So if want to add 6 panels drop it by 15% and if you want to take one out add 5% making it 30%.</p>
+                	<h5>Code View</h5>
+               	 	<pre><code>
+@media&nbsp;only&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;1024px)&nbsp;{
+&nbsp;&nbsp;.cd-projects-previews&nbsp;li&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;inline-block;
+&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;100%;
+&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;20%;
+&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;
+&nbsp;&nbsp;}
+                </code></pre>
+                </section>
+                <section>
+                	<p>Now still in the styles.css file go to line 392 and the code below. The code is where the 5th panel image will be added.</p>
+                	<h5>Code View</h5>
+                	<pre><code>
+.cd-projects-previews&nbsp;li:nth-of-type(5)&nbsp;a,
+.cd-projects&nbsp;&gt;&nbsp;li:nth-of-type(5)&nbsp;.preview-image&nbsp;{
+&nbsp;&nbsp;background:&nbsp;#835531&nbsp;url(../img/img-5.jpg)&nbsp;no-repeat&nbsp;center&nbsp;center;
+&nbsp;&nbsp;background-size:&nbsp;cover;
+                	</code></pre>
+                </section>
+                <section>
+                	<p>Now got to line 537 and 549 and add this code below.</p>
+               		<h5>Code View</h5>
+                	<pre><code>
+.cd-projects&nbsp;&gt;&nbsp;li:nth-of-type(5).selected&nbsp;.cd-project-title
+                	</code></pre>
+                </section>
+                <section>
+                	<h4>Presentation Video</h4>
+                    
+                </section>
+                
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
