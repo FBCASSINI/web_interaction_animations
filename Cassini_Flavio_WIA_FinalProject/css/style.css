@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+body {
+    background-image: url("../image/background.jpg");
+	width: 100%
+}
+#wrapper{
+	width: 100%	
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #000;
+}
+
+.logo {
+	position:absolute; 
+	margin: 0 45%;
+}
+
+audio {
+	position: relative;
+	top: 100%;
+	left: 75%;
+}
+
+.devtech{
+	position: absolute;
+	right: 350px;
+    bottom: 450px;
+	z-index: -1;
+}
+
+#slider {
+    width: 1500px;
+    height: 500px;
+    overflow: hidden;
+	margin: 0 225px;
+}
+
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 1500px;
+    height: 500px;
+}
+
+/* helper css, since we don't have images */
+.slide1 {background-image: url("../image/image1.jpg");}
+.slide2 {background-image: url("../image/image2.jpg");}
+.slide3 {background: url("../image/image3.jpg");}
+
+#barchart{
+	position: relative;
+	left: 225px;
+}
+
+section p {
+	color: #fff;
+	text-align:center;	
+}
+
+/*start interactive map*/
+
+/* CSS Document                  */
+/* Written by Chris Converse     */
+/* for Lynda.com                 */
+
+.grey {color: #aaa;}
+
+/*  City Info   */
+.city_detail_container { display: none; }
+.city_detail_container .city_detail { width: 300px; border: 1px solid #ccc; }
+
+
+/*  Interactive Map Container */
+.map_container {
+	background-image: url(../images/template/map.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 325px;
+	width: 760px;
+	position: relative;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	left: 30%;
+	margin: 0px 0px 0px 20px;
+}
+
+.map_container .clear_both { clear: both; line-height: 1px; }
+
+.map_container .city_info h2 {
+	margin: 0px 0px 0px 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.map_container .city_info h3 {
+	margin: 0px 0px 12px 0px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #2c3748;
+}
+.map_container p { margin: 0px 0px 12px 0px; }
+
+.map_container a, a:visited { color: #AA0000; margin: 0px 10px 0px 0px; }
+.map_container a.dot {
+	background-image: url(../images/template/dots.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	width: 20px;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+}
+.map_container a.dot.selected {
+	background-position: 0px -40px;
+}
+.map_container a.dot:hover {
+	background-position: 0px -20px;
+}
+.map_container .form_continent {
+	position: absolute;
+	top: 265px;
+	left: 30px;
+}
+.map_container .detail_container {
+	position: absolute;
+	top: 35px;
+	left: 480px;
+	width: 240px;
+	height: 260px;
+}
+.map_container .city_detail {
+	position: absolute;
+	top: 0px;
+	width: 230px;
+	padding: 10px 0px 0px 12px;
+	border-left: 1px solid #a9b5c8;
+	border-top: 1px solid #a9b5c8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.map_container .city_detail .city_photo {
+	float: left;
+	margin: 0px 15px 0px 0px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-box-shadow: 0px 5px 3px #4e5d74;
+	-moz-box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-border-radius: 8px;
+}
+.map_container .city_detail .city_info {
+	width: 130px;
+	float: left;
+}
+/*End Interactive Map*/
+
+.fadeAudio {
+	position: relative;
+	left: 80%;	
+}

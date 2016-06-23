@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="includes/interactive_map.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+
+<ul>
+  <li><img class="logo" src="image/logo.png" width="200px" height="50px"</li>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<button class="btn1">Slide up</button>
+<button class="btn2">Slide down</button>
+
+<div class="container">
+            </div>
+
+            <div id="slider">
+                <ul class="slides">
+                    <li class="slide slide1">slide1</li>
+                    <li class="slide slide2">slide2</li>
+                    <li class="slide slide3">slide3</li>
+                </ul>
+            </div>
+
+        </div> 
+</div>
+
+<section>
+<p>We are proffesionals in SEO, Web Design, and Server hosting. We strive to make your business with us a premier one. As you can see below this is our SEO bar chart to give you an example what we offer with SEO.</p>
+</section>
+
+
+<div id="barchart" style="width: 1500px; height: 400px;"></div>
+     <img class="devtech" src="image/logo.png" width="1300" height="390">
+     
+     <section>
+     <p>Our Servers is loctaed across the entire world. Choose a server location to best run in a location you need.</p>
+     </section>
+     
+     
+     <!--start Interactive Map-->
+     
+     <div class="map_container">
+
+			<!-- Dots -->
+			<a class="dot" style="top:99px;  left:113px;" continent="NA" city="dallas"></a>
+			<a class="dot" style="top:83px;  left:87px;"  continent="NA" city="seattle"></a>
+			<a class="dot" style="top:173px; left:387px;" continent="AU" city="perth" ></a>
+			<a class="dot" style="top:71px;  left:236px;" continent="EU" city="london"></a>
+			<a class="dot" style="top:166px; left:182px;" continent="SA" city="riodejaneiro"></a>
+			<a class="dot" style="top:102px; left:271px;" continent="AF" city="tripoli"></a>
+			<a class="dot" style="top:134px; left:153px;" continent="SA" city="bogota"></a>
+			<a class="dot" style="top:93px;  left:141px;" continent="NA" city="newyorkcity"></a>
+			<a class="dot" style="top:164px; left:277px;" continent="AF" city="johannesburg"></a>
+			<a class="dot" style="top:115px; left:375px;" continent="AS" city="phnompenh"></a>
+			<a class="dot" style="top:94px;  left:412px;" continent="AS" city="tokyo"></a>
+			<a class="dot" style="top:89px;  left:386px;" continent="AS" city="tianjin"></a>
+			<a class="dot" style="top:195px; left:153px;" continent="SA" city="puntaarenas"></a>
+			<a class="dot" style="top:96px;  left:320px;" continent="ME" city="buxoro"></a>
+			<a class="dot" style="top:113px; left:343px;" continent="ME" city="anakapalle"></a>
+			<a class="dot" style="top:110px; left:299px;" continent="ME" city="albahr"></a>
+			<a class="dot" style="top:84px;  left:257px;" continent="EU" city="rome"></a>
+			<a class="dot" style="top:76px; left:273px;" continent="EU" city="warszawa"></a>
+
+			
+			<!-- Form -->
+			<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
+				<select name="continent" id="continent">
+					<option value="AF">Africa</option>
+					<option value="AS">Asia</option>
+					<option value="AU">Australia</option>
+					<option value="EU">Europe</option>
+					<option value="NA">North America</option>
+					<option value="ME">Middle East</option>
+					<option value="SA">South America</option>
+					<option value="ALL" selected="selected">Show all continents</option>
+				</select>
+			</form>
+
+			<!-- City details -->
+			<div class="detail_container">
+				<!-- City -->
+				<div class="city_detail">
+					<h3>Choose a city.</h3>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<div class="city_detail_container">
+			<!-- City -->
+			<div class="city_detail" id="sydney">
+				<img class="city_photo" src="images/cities/sydney.jpg" alt="sydney" width="75" height="75" />
+				<div class="city_info">
+					<h2>Sydney 123</h2>
+					<h3>Australia</h3>
+					
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="london">
+				<img class="city_photo" src="images/cities/london.jpg" alt="sydney" width="75" height="75" />
+				<div class="city_info">
+					<h2>London</h2>
+					<h3>Europe</h3>
+					
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="riodejaneiro">
+				<img class="city_photo" src="images/cities/riodejaneiro.jpg" alt="rio de janeiro" width="75" height="75" />
+				<div class="city_info">
+					<h2>Rio de Janeiro</h2>
+					<h3>South America</h3>
+					
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="tokyo">
+				<img class="city_photo" src="images/cities/tokyo.jpg" alt="brazil" width="75" height="75" />
+				<div class="city_info">
+					<h2>Tokyo</h2>
+					<h3>Asia</h3>
+					
+				</div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="johannesburg">
+				<img class="city_photo" src="images/cities/johannesburg.jpg" alt="johannesburg" width="75" height="75" />
+				<div class="city_info">
+					<h2>Johannesburg</h2>
+					<h3>Africa</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			<!-- City -->
+			<div class="city_detail" id="dallas">
+				<img class="city_photo" src="images/cities/dallas.jpg" alt="dallas" width="75" height="75" />
+				<div class="city_info">
+					<h2>Dallas</h2>
+					<h3>North America</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="seattle">
+				<img class="city_photo" src="images/cities/seattle.jpg" alt="seattle" width="75" height="75" />
+				<div class="city_info">
+					<h2>Seattle</h2>
+					<h3>North America</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="perth">
+				<img class="city_photo" src="images/cities/perth.jpg" alt="perth" width="75" height="75" />
+				<div class="city_info">
+					<h2>Perth</h2>
+					<h3>Australia</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="tripoli">
+				<img class="city_photo" src="images/cities/tripoli.jpg" alt="tripoli" width="75" height="75" />
+				<div class="city_info">
+					<h2>Tripoli</h2>
+					<h3>Africa</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="bogota">
+				<img class="city_photo" src="images/cities/bogota.jpg" alt="bogota" width="75" height="75" />
+				<div class="city_info">
+					<h2>Bogot&aacute;</h2>
+					<h3>South America</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="newyorkcity">
+				<img class="city_photo" src="images/cities/newyorkcity.jpg" alt="newyorkcity" width="75" height="75" />
+				<div class="city_info">
+					<h2>New York City</h2>
+					<h3>North America</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="phnompenh">
+				<img class="city_photo" src="images/cities/phompenh.jpg" alt="phnompenh" width="75" height="75" />
+				<div class="city_info">
+					<h2>Phnom Penh</h2>
+					<h3>Asia</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="tianjin">
+				<img class="city_photo" src="images/cities/tianjin.jpg" alt="tianjin" width="75" height="75" />
+				<div class="city_info">
+					<h2>Tianjin</h2>
+					<h3>Asia</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="puntaarenas">
+				<img class="city_photo" src="images/cities/puntaarenas.jpg" alt="puntaarenas" width="75" height="75" />
+				<div class="city_info">
+					<h2>Punta Arenas</h2>
+					<h3>South America</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="buxoro">
+				<img class="city_photo" src="images/cities/buxoro.jpg" alt="buxoro" width="75" height="75" />
+				<div class="city_info">
+					<h2>Buxoro</h2>
+					<h3>Middle East</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="anakapalle">
+				<img class="city_photo" src="images/cities/anakapalle.jpg" alt="anakapalle" width="75" height="75" />
+				<div class="city_info">
+					<h2>Anakapalle</h2>
+					<h3>Middle East</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="albahr">
+				<img class="city_photo" src="images/cities/albahr.jpg" alt="albahr" width="75" height="75" />
+				<div class="city_info">
+					<h2>Al Bahr</h2>
+					<h3>Middle East</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="rome">
+				<img class="city_photo" src="images/cities/rome.jpg" alt="rome" width="75" height="75" />
+				<div class="city_info">
+					<h2>Rome</h2>
+					<h3>Europe</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+			
+			<!-- City -->
+			<div class="city_detail" id="warszawa">
+				<img class="city_photo" src="images/cities/warszawa.jpg" alt="warszawa" width="75" height="75" />
+				<div class="city_info">
+					<h2>Warszawa</h2>
+					<h3>Europe</h3>
+					
+				</div>
+				<div class="clear_both"></div>
+			</div>
+			
+		</div>
+     
+     
+     <!--Endinteractive Map-->
+        <div class="audioplay">
+  <audio controls>
+  <source src="audio/soundtails_-_Asylum.ogg" type="audio/ogg">
+  <source src="audio/soundtails_-_Asylum.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+
+<div class="fadeAudio">
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
+</div>
+</div><!--End of wrapper>-->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+
+
